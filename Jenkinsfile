@@ -1,15 +1,12 @@
 pipeline {
     agent any
     environment {
-        GITHUB_REPO = 'https://github.com/bilal-tkxel-do/DevOps-Assignment-4.git' // GitHub Repository URL
-        CREDENTIALS_ID = 'github-token'  // Credentials ID for GitHub
-        DEPLOY_ENV = 'production'       // Deployment environment
-        NAME = 'Bilal'                 // Your name
+        GITHUB_REPO = 'https://github.com/bilal-tkxel-do/DevOps-Assignment-4.git' 
+        CREDENTIALS_ID = 'github-token'  
+        DEPLOY_ENV = 'production'       
+        NAME = 'Bilal'                 
     }
-    triggers {
-        // Poll for changes or listen to webhooks
-        githubPush() // Automatically triggers when a push event occurs
-    }
+  
     stages {
         stage('Clone Repository') {
             steps {
@@ -18,15 +15,7 @@ pipeline {
                     url: "${GITHUB_REPO}"
             }
         }
-        stage('Build') {
-            agent {
-                docker { image 'node:14' } // Node.js build environment
-            }
-            steps {
-                sh 'node -v'
-                echo "Node.js build completed by ${NAME}"
-            }
-        }        
+
 	stage('Node.js Version') {
             agent {
                 label 'docker'  
