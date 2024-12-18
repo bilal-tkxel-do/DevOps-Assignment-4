@@ -2,21 +2,10 @@ pipeline {
     agent none  
 
     environment {
-	GITHUB_REPO = 'https://github.com/bilal-tkxel-do/DevOps-Assignment-4.git' 
-        CREDENTIALS_ID = 'github-token'  
-        DEPLOY_ENV = 'production'
         NAME = 'Bilal'  
     }
 
     stages {
-	stage('Clone Repository') {
-            steps {
-                git branch: 'main', 
-                    credentialsId: "${CREDENTIALS_ID}",
-                    url: "${GITHUB_REPO}"
-           }
-        }
-
         stage('Node.js Version') {
             agent {
                 label 'docker'  
