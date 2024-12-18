@@ -11,7 +11,7 @@ pipeline {
             agent any
             steps {
                 // Clone the repository and checkout the main branch
-                git branch: 'main', url: 'https://github.com/<your-username>/<your-repo>.git', credentialsId: 'github-token'
+                git branch: 'main', url: 'https://github.com/bilal-tkxel-do/DevOps-Assignment-4.git', credentialsId: 'github-token'
             }
          }
         stage('Node.js Version') {
