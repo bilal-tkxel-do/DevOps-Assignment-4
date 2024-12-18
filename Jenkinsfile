@@ -8,10 +8,6 @@ pipeline {
         NAME = 'Bilal'  
     }
 
-    triggers {
-        githubPush() 
-    }
-
     stages {
 	stage('Clone Repository') {
             steps {
