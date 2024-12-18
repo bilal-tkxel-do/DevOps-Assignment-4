@@ -1,7 +1,7 @@
 pipeline {
     agent none  // No default agent
 
-    environment i{
+    environment {
 	GITHUB_REPO = 'https://github.com/bilal-tkxel-do/DevOps-Assignment-4.git' // GitHub Repository URL
         CREDENTIALS_ID = 'github-token'  // Credentials ID for GitHub
         DEPLOY_ENV = 'production'
