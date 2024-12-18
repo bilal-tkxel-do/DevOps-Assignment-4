@@ -1,5 +1,5 @@
 pipeline {
-    agent none  // No default agent
+    agent any  // No default agent
 
     environment {
 	GITHUB_REPO = 'https://github.com/bilal-tkxel-do/DevOps-Assignment-4.git' // GitHub Repository URL
