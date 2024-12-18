@@ -1,5 +1,5 @@
 pipeline {
-    agent any  
+    agent none  
 
     environment {
 	GITHUB_REPO = 'https://github.com/bilal-tkxel-do/DevOps-Assignment-4.git' 
