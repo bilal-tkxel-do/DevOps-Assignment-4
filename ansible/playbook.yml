@@ -1,5 +1,5 @@
 ---
-- hosts: azure_vms
+- hosts: localhost
   become: yes
 
   roles:
