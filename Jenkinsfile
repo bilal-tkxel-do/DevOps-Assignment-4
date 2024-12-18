@@ -18,15 +18,15 @@ pipeline {
                     url: "${GITHUB_REPO}"
             }
         }
-//        stage('Build') {
-//            agent {
-//                docker { image 'node:14' } // Node.js build environment
-//            }
-//            steps {
-//                sh 'node -v'
-//                echo "Node.js build completed by ${NAME}"
-//            }
-//        }        
+        stage('Build') {
+            agent {
+                docker { image 'node:14' } // Node.js build environment
+            }
+            steps {
+                sh 'node -v'
+                echo "Node.js build completed by ${NAME}"
+            }
+        }        
 	stage('Node.js Version') {
             agent {
                 label 'docker'  
